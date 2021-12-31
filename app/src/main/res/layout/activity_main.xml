@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8D8D8"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10px"
+        android:paddingBottom="40px"
+        android:text="Kalkulator Bagus"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:id="@+id/edtAngka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="0" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RadioGroup
+        android:id="@+id/tombol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbTambah"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Tambah"/>
+
+        <RadioButton
+            android:id="@+id/rbKurang"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Kurang"/>
+
+        <RadioButton
+            android:id="@+id/rbKali"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Kali"/>
+
+        <RadioButton
+            android:id="@+id/rbBagi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Bagi"/>
+
+    </RadioGroup>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <EditText
+        android:id="@+id/edtAngka2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="0" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        android:onClick="hasil"
+        android:text="HITUNG"
+        android:textColor="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/txHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txRiwayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Riwayat"
+        android:paddingTop="20px" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListRiwayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

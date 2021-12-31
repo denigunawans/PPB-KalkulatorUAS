@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KalkulatorUAS</string>
+    <string name="shared_key">HasilHitungKey</string>
+    <string name="key_hasil">saveHasil</string>
+</resources>
