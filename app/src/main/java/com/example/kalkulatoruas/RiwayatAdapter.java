@@ -3,7 +3,6 @@ package com.example.kalkulatoruas;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.ViewHolder> {
 
@@ -62,7 +60,6 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.ViewHold
                 @Override
                 public boolean onLongClick(View view) {
                     int p = getLayoutPosition();
-                    System.out.println("long klikkkkkkkkkkkkkkkkk "+p);
 
                     AlertDialog.Builder alert = new AlertDialog.Builder(context);
                     alert.setTitle("Hapus Riwayat")
@@ -78,14 +75,6 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.ViewHold
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     String id = listRiwayat.get(p).getId();
 
-//                                    Map<String, ?> entries = sharedPreferences.getAll();
-//                                    for (Map.Entry<String, ?> entry: entries.entrySet()) {
-//                                        if (listRiwayat.get(p).toString().equals(entry.getValue().toString())){
-//                                            System.out.println(entry.getValue().toString());
-//                                            sharedPreferences.edit().remove(entry.getKey()).commit();
-//                                            break;
-//                                        }
-//                                    }
                                     sharedPreferences.edit().remove(id).commit();
 
                                     for (int j = 0; j < listRiwayat.size(); j++) {
